@@ -50,6 +50,7 @@ export function MobileMenu() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/research", label: "Research" },
+    { href: "/experiments", label: "Experiments" },
     { href: "/contact", label: "Contact" },
   ]
 

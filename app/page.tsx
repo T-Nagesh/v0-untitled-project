@@ -1,42 +1,51 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { getAllProjects } from "@/lib/projects-data"
+import { AsciiBackground } from "@/components/ascii-background"
+import { MouseFollowingPhoto } from "@/components/mouse-following-photo"
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null)
-  const projects = getAllProjects()
+  const projects = getAllProjects().filter((project) => project.slug !== "3d-printed-watercolor-box")
+  const heroRef = useRef<HTMLDivElement>(null)
+  const [showPhoto, setShowPhoto] = useState(true)
+
+  // Handle scroll to hide photo when scrolling past hero section
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const heroBottom = heroRef.current.getBoundingClientRect().bottom
+        setShowPhoto(heroBottom > 0)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <div>
-      <section className="py-20 md:py-32 bg-neutral-900">
+    <div className="relative">
+      <AsciiBackground />
+
+      <section ref={heroRef} className="py-20 md:py-32 bg-neutral-900 bg-opacity-80 relative z-10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row gap-12 items-start">
-            <motion.div
-              className="md:order-2 flex-shrink-0"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-green-400">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10"></div>
-                <Image
-                  src="/images/profile.jpg"
-                  alt="Tejaswini Nagesh"
-                  width={400}
-                  height={400}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
-                <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
-              </div>
-            </motion.div>
+            {showPhoto && (
+              <motion.div
+                className="md:order-2 flex-shrink-0"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <MouseFollowingPhoto src="/images/profile.jpg" alt="Tejaswini Nagesh" width={400} height={400} />
+              </motion.div>
+            )}
 
             <motion.div
               className="max-w-2xl md:order-1"
@@ -63,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-black bg-opacity-90 relative z-10">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-16 text-white">Selected Projects</h2>
 

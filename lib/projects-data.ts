@@ -31,6 +31,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "3d-printed-watercolor-box",
+    title: "3D PRINTED WATERCOLOR BOX",
+    subtitle: "Dual-color 3D printed palette with modular stacking design",
+    description: "Custom-designed watercolor palette with modular stacking features",
+    fullDescription:
+      "A custom-designed watercolor palette and carrying case created using a simple 3D printer with dual-color printing capabilities. The modular design allows for flexible configuration based on the artist's needs.",
+    mainImage:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250427_145750.jpg-ljP3xXt91raxHmuM39vBJTv2OgmaHa.jpeg",
+    year: "2024",
+    client: "Personal Project",
+    role: "Designer & Fabricator",
+    tags: ["3D Printing", "Product Design", "Art Tools", "Modular Design"],
+  },
+  {
     slug: "loopholes",
     title: "LOOPHOLES",
     subtitle: "for change",

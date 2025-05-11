@@ -80,6 +80,17 @@ export default function ClientLayout({
                   )}
                 </Link>
                 <Link
+                  href="/experiments"
+                  className={`text-sm uppercase tracking-wide font-medium hover:text-green-400 transition-colors relative ${
+                    pathname === "/experiments" ? "text-green-400" : ""
+                  }`}
+                >
+                  Experiments
+                  {pathname === "/experiments" && (
+                    <motion.span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-400" layoutId="underline" />
+                  )}
+                </Link>
+                <Link
                   href="/contact"
                   className={`text-sm uppercase tracking-wide font-medium hover:text-green-400 transition-colors relative ${
                     pathname === "/contact" ? "text-green-400" : ""
@@ -114,6 +125,14 @@ export default function ClientLayout({
                   className="text-sm text-neutral-400 hover:text-green-400 transition-colors"
                 >
                   LinkedIn
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                <Link
+                  href="mailto:tejnagesh@gmail.com"
+                  className="text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                >
+                  Email
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>

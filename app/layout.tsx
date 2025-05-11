@@ -49,6 +49,9 @@ export default function RootLayout({
                   <Link href="/research" className="hover:text-green-400 transition-colors">
                     Research
                   </Link>
+                  <Link href="/experiments" className="hover:text-green-400 transition-colors">
+                    Experiments
+                  </Link>
                   <Link href="/contact" className="hover:text-green-400 transition-colors">
                     Contact
                   </Link>
@@ -63,8 +66,8 @@ export default function RootLayout({
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div>
                     <h3 className="text-sm font-medium uppercase tracking-widest mb-4">Contact</h3>
-                    <p className="text-sm text-neutral-400">hello@tejaswininagesh.com</p>
-                    <p className="text-sm text-neutral-400">San Francisco, California</p>
+                    <p className="text-sm text-neutral-400">tejnagesh@gmail.com</p>
+                    <p className="text-sm text-neutral-400">Amsterdam, Netherlands</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-medium uppercase tracking-widest mb-4">Connect</h3>
