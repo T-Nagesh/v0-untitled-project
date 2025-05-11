@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
@@ -79,15 +78,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           )}
         </header>
 
-        <div className="mb-16 aspect-video relative overflow-hidden">
-          <Image
-            src={project.mainImage || "/placeholder.svg"}
-            alt={project.title}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+        {/* Removed the thumbnail image that was here */}
 
         {project.sections &&
           project.sections.map((section, index) => (
