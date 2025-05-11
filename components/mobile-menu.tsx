@@ -45,6 +45,7 @@ export function MobileMenu() {
     }),
   }
 
+  // These are the only links that should appear in the mobile menu
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },

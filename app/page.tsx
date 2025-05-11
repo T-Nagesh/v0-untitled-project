@@ -4,42 +4,11 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { getAllProjects } from "@/lib/projects-data"
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null)
-
-  const projects = [
-    {
-      slug: "on-the-right-track",
-      title: "ON THE RIGHT TRACK",
-      description: "Mitigating elephant-train collisions in India",
-      image: "/images/project-track.jpg",
-    },
-    {
-      slug: "loopholes",
-      title: "LOOPHOLES",
-      description: "Toolkit for sustainable transitions in fashion companies",
-      image: "/images/project-loopholes.jpg",
-    },
-    {
-      slug: "river-of-possibilities",
-      title: "RIVER OF POSSIBILITIES",
-      description: "Exploring sustainable water management solutions",
-      image: "/images/project-river.jpg",
-    },
-    {
-      slug: "what-is-it-like-to-be-an-ant",
-      title: "WHAT IS IT LIKE TO BE AN ANT?",
-      description: "Workshop on how to think like an ant",
-      image: "/images/project-ant.jpg",
-    },
-    {
-      slug: "canopy-collective",
-      title: "CANOPY COLLECTIVE",
-      description: "Interdisciplinary collaboration for nature conservation",
-      image: "/images/project-canopy.jpg",
-    },
-  ]
+  const projects = getAllProjects()
 
   return (
     <div>
@@ -84,7 +53,7 @@ export default function Home() {
                 >
                   <div className="relative aspect-square overflow-hidden mb-4 max-w-[240px]">
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={project.mainImage || "/placeholder.svg"}
                       alt={project.title}
                       width={240}
                       height={240}
