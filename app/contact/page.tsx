@@ -26,12 +26,12 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-sm font-medium uppercase tracking-widest mb-2">Email</h3>
-                <p className="text-sm">hello@tejaswininagesh.com</p>
+                <p className="text-sm">tejnagesh@gmail.com</p>
               </div>
 
               <div>
                 <h3 className="text-sm font-medium uppercase tracking-widest mb-2">Location</h3>
-                <p className="text-sm">San Francisco, California</p>
+                <p className="text-sm">Amsterdam, Netherlands</p>
               </div>
             </div>
           </div>

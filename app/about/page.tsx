@@ -247,14 +247,13 @@ export default function AboutPage() {
             </a>
 
             <a
-              href="https://linkedin.com/in/TejaswiniNagesh"
+              href="https://linkedin.com/in/tejnagesh"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm hover:text-green-400 transition-colors group"
             >
               <span className="font-mono">
-                <span className="text-green-400 group-hover:mr-1 transition-all">→</span>{" "}
-                linkedin.com/in/TejaswiniNagesh
+                <span className="text-green-400 group-hover:mr-1 transition-all">→</span> linkedin.com/in/tejnagesh
               </span>
             </a>
           </div>

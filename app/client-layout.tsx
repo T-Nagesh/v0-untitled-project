@@ -109,17 +109,18 @@ export default function ClientLayout({
             <div className="text-sm text-neutral-400">© {new Date().getFullYear()} Tejaswini Nagesh</div>
             <div className="flex gap-6">
               <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
-                <Link href="#" className="text-sm text-neutral-400 hover:text-green-400 transition-colors">
+                <Link
+                  href="https://www.linkedin.com/in/tejnagesh/"
+                  className="text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                >
                   LinkedIn
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
-                <Link href="#" className="text-sm text-neutral-400 hover:text-green-400 transition-colors">
-                  Twitter
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
-                <Link href="#" className="text-sm text-neutral-400 hover:text-green-400 transition-colors">
+                <Link
+                  href="https://www.instagram.com/tejaswininagesh/?hl=en"
+                  className="text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                >
                   Instagram
                 </Link>
               </motion.div>

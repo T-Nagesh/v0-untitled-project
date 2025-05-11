@@ -10,16 +10,16 @@ export default function Home() {
 
   const projects = [
     {
-      slug: "loopholes",
-      title: "LOOPHOLES",
-      description: "Toolkit for sustainable transitions in fashion companies",
-      image: "/images/project-loopholes.jpg",
-    },
-        {
       slug: "on-the-right-track",
       title: "ON THE RIGHT TRACK",
       description: "Mitigating elephant-train collisions in India",
       image: "/images/project-track.jpg",
+    },
+    {
+      slug: "loopholes",
+      title: "LOOPHOLES",
+      description: "Toolkit for sustainable transitions in fashion companies",
+      image: "/images/project-loopholes.jpg",
     },
     {
       slug: "river-of-possibilities",

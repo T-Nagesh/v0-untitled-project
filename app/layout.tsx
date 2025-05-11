@@ -69,13 +69,16 @@ export default function RootLayout({
                   <div>
                     <h3 className="text-sm font-medium uppercase tracking-widest mb-4">Connect</h3>
                     <div className="space-y-2">
-                      <Link href="#" className="block text-sm text-neutral-400 hover:text-green-400 transition-colors">
+                      <Link
+                        href="https://www.linkedin.com/in/tejnagesh/"
+                        className="block text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                      >
                         LinkedIn
                       </Link>
-                      <Link href="#" className="block text-sm text-neutral-400 hover:text-green-400 transition-colors">
-                        Twitter
-                      </Link>
-                      <Link href="#" className="block text-sm text-neutral-400 hover:text-green-400 transition-colors">
+                      <Link
+                        href="https://www.instagram.com/tejaswininagesh/?hl=en"
+                        className="block text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                      >
                         Instagram
                       </Link>
                     </div>
