@@ -33,10 +33,6 @@ export default function AboutPage() {
               <a href="mailto:tejnagesh@gmail.com" className="hover:text-green-400 transition-colors">
                 tejnagesh@gmail.com
               </a>
-              <span className="hidden sm:inline text-neutral-600">|</span>
-              <a href="tel:+31684485763" className="hover:text-green-400 transition-colors">
-                +31 684485763
-              </a>
             </div>
             <div className="mt-4 inline-block">
               <span className="font-mono text-xs border border-green-400 px-2 py-1 text-green-400">
