@@ -33,7 +33,7 @@ export default function ClientLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <div className="flex flex-col min-h-screen">
             <motion.header
-              className="border-b border-neutral-800"
+              className="border-b border-blue-500/30"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -42,11 +42,12 @@ export default function ClientLayout({
                 <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
                   <Link href="/" className="flex items-center gap-2">
                     <Image
-                      src="/images/logo.svg"
+                      src="/images/logo-tokay.png"
                       alt="Tokay Designs Logo"
                       width={120}
                       height={60}
                       className="h-12 w-auto"
+                      priority
                     />
                   </Link>
                 </motion.div>
@@ -54,70 +55,70 @@ export default function ClientLayout({
                   <nav className="hidden md:flex items-center gap-8">
                     <Link
                       href="/"
-                      className={`text-sm uppercase tracking-wide font-medium hover:text-green-400 transition-colors relative ${
-                        pathname === "/" ? "text-green-400" : ""
+                      className={`text-sm uppercase tracking-wide font-medium hover:text-orange-500 transition-colors relative ${
+                        pathname === "/" ? "text-blue-500" : ""
                       }`}
                     >
                       Home
                       {pathname === "/" && (
                         <motion.span
-                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-400"
+                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-500"
                           layoutId="underline"
                         />
                       )}
                     </Link>
                     <Link
                       href="/about"
-                      className={`text-sm uppercase tracking-wide font-medium hover:text-green-400 transition-colors relative ${
-                        pathname === "/about" ? "text-green-400" : ""
+                      className={`text-sm uppercase tracking-wide font-medium hover:text-orange-500 transition-colors relative ${
+                        pathname === "/about" ? "text-blue-500" : ""
                       }`}
                     >
                       About
                       {pathname === "/about" && (
                         <motion.span
-                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-400"
+                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-500"
                           layoutId="underline"
                         />
                       )}
                     </Link>
                     <Link
                       href="/research"
-                      className={`text-sm uppercase tracking-wide font-medium hover:text-green-400 transition-colors relative ${
-                        pathname === "/research" ? "text-green-400" : ""
+                      className={`text-sm uppercase tracking-wide font-medium hover:text-orange-500 transition-colors relative ${
+                        pathname === "/research" ? "text-blue-500" : ""
                       }`}
                     >
                       Research
                       {pathname === "/research" && (
                         <motion.span
-                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-400"
+                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-500"
                           layoutId="underline"
                         />
                       )}
                     </Link>
                     <Link
                       href="/experiments"
-                      className={`text-sm uppercase tracking-wide font-medium hover:text-green-400 transition-colors relative ${
-                        pathname === "/experiments" ? "text-green-400" : ""
+                      className={`text-sm uppercase tracking-wide font-medium hover:text-orange-500 transition-colors relative ${
+                        pathname === "/experiments" ? "text-blue-500" : ""
                       }`}
                     >
                       Experiments
                       {pathname === "/experiments" && (
                         <motion.span
-                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-400"
+                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-500"
                           layoutId="underline"
                         />
                       )}
                     </Link>
                     <Link
                       href="/contact"
-                      className={`text-sm uppercase tracking-wide font-medium hover:text-green-400 transition-colors relative ${
-                        pathname === "/contact" ? "text-green-400" : ""
+                      className={`text-sm uppercase tracking-wide font-medium hover:text-orange-500 transition-colors relative ${
+                        pathname === "/contact" ? "text-blue-500" : ""
                       }`}
                     >
                       Contact
                       {pathname === "/contact" && (
                         <motion.span
-                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-400"
+                          className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-500"
                           layoutId="underline"
                         />
                       )}
@@ -132,7 +133,7 @@ export default function ClientLayout({
             </motion.header>
             <main className="flex-1">{children}</main>
             <motion.footer
-              className="border-t border-neutral-800 py-6"
+              className="border-t border-blue-500/30 py-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -143,7 +144,7 @@ export default function ClientLayout({
                   <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
                     <Link
                       href="https://www.linkedin.com/in/tejnagesh/"
-                      className="text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                      className="text-sm text-neutral-400 hover:text-orange-500 transition-colors"
                     >
                       LinkedIn
                     </Link>
@@ -151,7 +152,7 @@ export default function ClientLayout({
                   <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
                     <Link
                       href="mailto:tejnagesh@gmail.com"
-                      className="text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                      className="text-sm text-neutral-400 hover:text-orange-500 transition-colors"
                     >
                       Email
                     </Link>
@@ -159,7 +160,7 @@ export default function ClientLayout({
                   <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
                     <Link
                       href="https://www.instagram.com/tejaswininagesh/?hl=en"
-                      className="text-sm text-neutral-400 hover:text-green-400 transition-colors"
+                      className="text-sm text-neutral-400 hover:text-orange-500 transition-colors"
                     >
                       Instagram
                     </Link>

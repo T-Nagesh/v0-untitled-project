@@ -25,7 +25,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     >
       <Link
         href="/"
-        className="inline-flex items-center gap-2 text-sm font-medium hover:text-green-400 transition-colors mb-8"
+        className="inline-flex items-center gap-2 text-sm font-medium hover:text-orange-500 transition-colors mb-8"
       >
         <ArrowLeft className="h-4 w-4" />
         Back to all projects
@@ -33,7 +33,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
       <div className="max-w-4xl mx-auto">
         <header className="mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">{project.title}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4 text-blue-500">{project.title}</h1>
           {project.subtitle && <h2 className="text-xl md:text-2xl text-neutral-400 mb-6">{project.subtitle}</h2>}
           <p className="text-lg text-neutral-300 mb-8 max-w-2xl">{project.description}</p>
 
@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <Button
               asChild
               variant="outline"
-              className="rounded-none border-green-400 text-green-400 hover:bg-green-400/10"
+              className="rounded-none border-orange-500 text-orange-500 hover:bg-orange-500/10"
             >
               <a
                 href={project.website}
@@ -78,12 +78,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           )}
         </header>
 
-        {/* Removed the thumbnail image that was here */}
-
         {project.sections &&
           project.sections.map((section, index) => (
             <section key={index} className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tighter mb-6 text-green-400">{section.title}</h2>
+              <h2 className="text-2xl font-bold tracking-tighter mb-6 text-blue-500">{section.title}</h2>
 
               {Array.isArray(section.content) ? (
                 <ul className="space-y-4 mb-8">
@@ -117,7 +115,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
         {project.collaborators && project.collaborators.length > 0 && (
           <section className="mb-16">
-            <h2 className="text-2xl font-bold tracking-tighter mb-6 text-green-400">Collaborators</h2>
+            <h2 className="text-2xl font-bold tracking-tighter mb-6 text-blue-500">Collaborators</h2>
             <div className="flex flex-wrap gap-4">
               {project.collaborators.map((collaborator, index) => (
                 <Badge key={index} className="bg-neutral-800 hover:bg-neutral-700">

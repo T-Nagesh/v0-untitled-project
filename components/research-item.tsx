@@ -20,7 +20,7 @@ export default function ResearchItem({ title, journal, year, link }: ResearchIte
         </div>
         <Link
           href={link}
-          className="inline-flex items-center text-sm font-medium text-green-600 hover:text-green-700 dark:text-green-500 dark:hover:text-green-400 shrink-0"
+          className="inline-flex items-center text-sm font-medium text-blue-500 hover:text-orange-500 transition-colors shrink-0"
         >
           Read Paper <ArrowUpRight className="ml-1 h-3 w-3" />
         </Link>

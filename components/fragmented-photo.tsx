@@ -65,9 +65,9 @@ export function FragmentedPhoto({ src, alt, width, height, className = "" }: Fra
   return (
     <div ref={containerRef} className={`relative w-48 h-48 md:w-64 md:h-64 overflow-visible ${className}`}>
       {/* Border frame */}
-      <div className="absolute inset-0 border-2 border-green-400 z-20 pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
-        <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
+      <div className="absolute inset-0 border-2 border-orange-500 z-20 pointer-events-none">
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500"></div>
+        <div className="absolute top-0 right-0 w-1 h-full bg-orange-500"></div>
       </div>
 
       {/* Image fragments */}
@@ -144,7 +144,7 @@ export function FragmentedPhoto({ src, alt, width, height, className = "" }: Fra
       </div>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent mix-blend-overlay z-10 pointer-events-none"></div>
     </div>
   )
 }

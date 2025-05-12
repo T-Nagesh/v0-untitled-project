@@ -76,15 +76,15 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
     // Check each text element for overlap
     textElements.forEach((element) => {
       if (isOverlapping(element)) {
-        // Add green text class with !important to override any existing styles
-        element.setAttribute("style", "color: #22c55e !important; transition: color 0.3s ease;")
+        // Add orange text class with !important to override any existing styles
+        element.setAttribute("style", "color: #f37434 !important; transition: color 0.3s ease;")
       } else {
         // Remove the style attribute to revert to original color
         element.removeAttribute("style")
       }
     })
 
-    // Cleanup function to remove all green text styles when component unmounts
+    // Cleanup function to remove all orange text styles when component unmounts
     return () => {
       textElements.forEach((element) => {
         element.removeAttribute("style")
@@ -149,8 +149,8 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
               zIndex: 10 - index, // Ensure proper stacking
             }}
           >
-            <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-green-400">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10"></div>
+            <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-blue-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent mix-blend-overlay z-10"></div>
               <Image
                 src={src || "/placeholder.svg"}
                 alt={alt}
@@ -159,8 +159,8 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
                 className="object-cover w-full h-full"
                 priority
               />
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
-              <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-500"></div>
+              <div className="absolute top-0 right-0 w-1 h-full bg-blue-500"></div>
             </div>
           </motion.div>
         )
@@ -178,8 +178,8 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
           zIndex: 15, // Ensure main photo is on top
         }}
       >
-        <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-green-400">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10"></div>
+        <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-blue-500">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent mix-blend-overlay z-10"></div>
           <Image
             src={src || "/placeholder.svg"}
             alt={alt}
@@ -188,8 +188,8 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
             className="object-cover w-full h-full"
             priority
           />
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
-          <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-500"></div>
+          <div className="absolute top-0 right-0 w-1 h-full bg-blue-500"></div>
         </div>
       </motion.div>
     </>

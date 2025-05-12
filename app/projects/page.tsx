@@ -49,7 +49,7 @@ export default function ProjectsPage() {
       <div className="flex items-center gap-4 mb-12">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-medium hover:text-green-400 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-medium hover:text-orange-400 transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           Back to home
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
                 />
               </div>
               <div>
-                <h2 className="text-xl font-bold tracking-tight group-hover:text-green-400 transition-colors mb-2">
+                <h2 className="text-xl font-bold tracking-tight group-hover:text-orange-400 transition-colors mb-2">
                   {project.title}
                 </h2>
                 <p className="text-sm text-neutral-400">{project.description}</p>

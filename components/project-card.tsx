@@ -36,7 +36,7 @@ export default function ProjectCard({ title, description, image, tags, link }: P
       <CardFooter className="p-6 pt-0">
         <Link
           href={link}
-          className="inline-flex items-center text-sm font-medium text-green-600 hover:text-green-700 dark:text-green-500 dark:hover:text-green-400"
+          className="inline-flex items-center text-sm font-medium text-blue-500 hover:text-orange-500 transition-colors"
         >
           View Project <ArrowUpRight className="ml-1 h-3 w-3" />
         </Link>

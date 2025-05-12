@@ -66,7 +66,7 @@ export default function ResearchPage() {
       className="container mx-auto px-4 md:px-6 py-12 md:py-20"
     >
       <div className="max-w-3xl">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-8">Research</h1>
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-8 text-blue-500">Research</h1>
 
         <p className="text-lg mb-12 text-neutral-300">
           My research focuses on the intersection of design, technology, and environmental conservation. Below are my
@@ -75,16 +75,16 @@ export default function ResearchPage() {
 
         <div className="space-y-16">
           <section>
-            <h2 className="text-xl font-bold tracking-tighter mb-6 text-green-400 flex items-center">
-              <span className="inline-block w-4 h-0.5 bg-green-400 mr-2"></span>
+            <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+              <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
               Publications
-              <span className="inline-block w-4 h-0.5 bg-green-400 ml-2"></span>
+              <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
             </h2>
             <div className="space-y-10">
               {publications.map((pub, index) => (
                 <motion.div
                   key={index}
-                  className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors"
+                  className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -98,7 +98,7 @@ export default function ResearchPage() {
                     href={pub.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-xs font-medium text-green-400 hover:text-green-300 transition-colors"
+                    className="inline-flex items-center text-xs font-medium text-blue-500 hover:text-orange-500 transition-colors"
                   >
                     Read Publication <ExternalLink className="ml-1 h-3 w-3" />
                   </Link>
@@ -108,16 +108,16 @@ export default function ResearchPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold tracking-tighter mb-6 text-green-400 flex items-center">
-              <span className="inline-block w-4 h-0.5 bg-green-400 mr-2"></span>
+            <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+              <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
               Ongoing Research Initiatives
-              <span className="inline-block w-4 h-0.5 bg-green-400 ml-2"></span>
+              <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
             </h2>
             <div className="space-y-8">
               {currentResearch.map((research, index) => (
                 <motion.div
                   key={index}
-                  className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors"
+                  className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
@@ -130,19 +130,19 @@ export default function ResearchPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold tracking-tighter mb-6 text-green-400 flex items-center">
-              <span className="inline-block w-4 h-0.5 bg-green-400 mr-2"></span>
+            <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+              <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
               Research Interests
-              <span className="inline-block w-4 h-0.5 bg-green-400 ml-2"></span>
+              <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
-                className="bg-black/30 p-4 border border-green-400/20 hover:border-green-400/50 transition-colors"
+                className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                <h3 className="text-base font-medium mb-3 text-green-400">Conservation Design</h3>
+                <h3 className="text-base font-medium mb-3 text-blue-500">Conservation Design</h3>
                 <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-neutral-300">
                   <li>Human-wildlife conflict mitigation</li>
                   <li>Participatory design for conservation</li>
@@ -152,12 +152,12 @@ export default function ResearchPage() {
               </motion.div>
 
               <motion.div
-                className="bg-black/30 p-4 border border-green-400/20 hover:border-green-400/50 transition-colors"
+                className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <h3 className="text-base font-medium mb-3 text-green-400">Technology & Ethics</h3>
+                <h3 className="text-base font-medium mb-3 text-blue-500">Technology & Ethics</h3>
                 <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-neutral-300">
                   <li>Ethical technology deployment in conservation</li>
                   <li>AI and machine learning for wildlife monitoring</li>

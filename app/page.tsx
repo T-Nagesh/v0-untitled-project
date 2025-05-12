@@ -63,7 +63,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-white">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-blue-500">
               Design Research at the Intersection of Nature & Technology
             </h1>
             <p className="text-lg md:text-xl text-neutral-400 mb-8">
@@ -93,7 +93,7 @@ export default function Home() {
 
       <section className="py-20 bg-black bg-opacity-90 relative z-10">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-16 text-white">Selected Projects</h2>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-16 text-blue-500">Selected Projects</h2>
 
           <div className="space-y-32">
             {projects.map((project, index) => (
@@ -122,7 +122,7 @@ export default function Home() {
                   <div className={`md:col-span-7 order-2 ${index % 2 === 0 ? "md:order-2" : "md:order-1"}`}>
                     <div className="space-y-6">
                       <div className="space-y-2">
-                        <h3 className="text-2xl md:text-3xl font-bold tracking-tighter group-hover:text-green-400 transition-colors">
+                        <h3 className="text-2xl md:text-3xl font-bold tracking-tighter text-blue-500 group-hover:text-orange-500 transition-colors">
                           {project.title}
                         </h3>
                         {project.subtitle && <p className="text-lg text-neutral-400">{project.subtitle}</p>}
@@ -155,7 +155,7 @@ export default function Home() {
 
                       <Link
                         href={`/projects/${project.slug}`}
-                        className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors group"
+                        className="inline-flex items-center text-blue-500 hover:text-orange-500 transition-colors group"
                       >
                         View Project
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

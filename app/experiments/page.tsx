@@ -18,7 +18,9 @@ export default function ExperimentsPage() {
       className="container mx-auto px-4 md:px-6 py-12 md:py-20"
     >
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Experiments & Side Projects</h1>
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-blue-500">
+          Experiments & Side Projects
+        </h1>
         <p className="text-lg text-neutral-400 mb-12">
           A collection of personal explorations, creative experiments, and fun side projects that I work on in my spare
           time.
@@ -34,7 +36,7 @@ export default function ExperimentsPage() {
               className="group"
             >
               <Link href={`/projects/${experiment.slug}`}>
-                <div className="relative aspect-square overflow-hidden mb-4 border border-neutral-800 group-hover:border-green-400 transition-colors">
+                <div className="relative aspect-square overflow-hidden mb-4 border border-neutral-800 group-hover:border-orange-500 transition-colors">
                   <Image
                     src={experiment.image || "/placeholder.svg"}
                     alt={experiment.title}
@@ -42,7 +44,7 @@ export default function ExperimentsPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h2 className="text-xl font-bold group-hover:text-green-400 transition-colors mb-2">
+                <h2 className="text-xl font-bold group-hover:text-orange-500 transition-colors mb-2">
                   {experiment.title}
                 </h2>
                 <p className="text-sm text-neutral-400 mb-3">{experiment.description}</p>
@@ -53,7 +55,7 @@ export default function ExperimentsPage() {
                     </Badge>
                   ))}
                 </div>
-                <div className="flex items-center text-sm text-green-400 group-hover:text-green-300 transition-colors">
+                <div className="flex items-center text-sm text-orange-500 group-hover:text-orange-400 transition-colors">
                   <span>View experiment</span>
                   <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
                 </div>

@@ -41,16 +41,16 @@ export function AnimatedCursor() {
       y: mousePosition.y - 16,
       height: 32,
       width: 32,
-      backgroundColor: "rgba(34, 197, 94, 0)",
-      border: "2px solid rgba(34, 197, 94, 0.5)",
+      backgroundColor: "rgba(243, 116, 52, 0)",
+      border: "2px solid rgba(243, 116, 52, 0.5)",
     },
     hover: {
       x: mousePosition.x - 24,
       y: mousePosition.y - 24,
       height: 48,
       width: 48,
-      backgroundColor: "rgba(34, 197, 94, 0.1)",
-      border: "2px solid rgba(34, 197, 94, 0.8)",
+      backgroundColor: "rgba(243, 116, 52, 0.1)",
+      border: "2px solid rgba(243, 116, 52, 0.8)",
     },
   }
 

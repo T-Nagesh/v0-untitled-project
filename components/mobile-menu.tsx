@@ -93,7 +93,7 @@ export function MobileMenu() {
                   >
                     <Link
                       href={link.href}
-                      className={`text-2xl font-medium ${pathname === link.href ? "text-green-400" : ""}`}
+                      className={`text-2xl font-medium ${pathname === link.href ? "text-blue-500" : ""} hover:text-orange-500 transition-colors`}
                       onClick={toggleMenu}
                     >
                       {link.label}

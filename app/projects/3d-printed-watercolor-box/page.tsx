@@ -16,7 +16,7 @@ export default function WatercolorBoxProject() {
     >
       <Link
         href="/experiments"
-        className="inline-flex items-center gap-2 text-sm font-medium hover:text-green-400 transition-colors mb-8"
+        className="inline-flex items-center gap-2 text-sm font-medium hover:text-orange-500 transition-colors mb-8"
       >
         <ArrowLeft className="h-4 w-4" />
         Back to experiments
@@ -24,7 +24,9 @@ export default function WatercolorBoxProject() {
 
       <div className="max-w-3xl mx-auto">
         <header className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">3D Printed Watercolor Box</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-blue-500">
+            3D Printed Watercolor Box
+          </h1>
           <p className="text-lg text-neutral-300 mb-8">
             A quick experiment with dual-color 3D printing to make a portable watercolor palette.
           </p>
@@ -53,7 +55,7 @@ export default function WatercolorBoxProject() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold tracking-tighter mb-6 text-green-400">The Experiment</h2>
+          <h2 className="text-2xl font-bold tracking-tighter mb-6 text-blue-500">The Experiment</h2>
           <p className="text-neutral-300 mb-6">
             Wanted to see if I could make a functional watercolor palette on my 3D printer using yellow PLA and black
             TPU. The wavy pattern was just for fun.
@@ -62,7 +64,7 @@ export default function WatercolorBoxProject() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold tracking-tighter mb-6 text-green-400">Printing Process</h2>
+          <h2 className="text-2xl font-bold tracking-tighter mb-6 text-blue-500">Printing Process</h2>
           <div className="relative w-full aspect-video overflow-hidden rounded-lg mb-2">
             <video
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/printer-ybcYje0DKiQZa4slux9SKYlol14jwM.mp4"
@@ -77,7 +79,7 @@ export default function WatercolorBoxProject() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold tracking-tighter mb-6 text-green-400">Palette in the Wild</h2>
+          <h2 className="text-2xl font-bold tracking-tighter mb-6 text-blue-500">Palette in the Wild</h2>
           <p className="text-neutral-300 mb-6">Taking it out for some sketching sessions.</p>
 
           <div className="grid grid-cols-1 gap-8">

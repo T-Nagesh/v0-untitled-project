@@ -14,7 +14,7 @@ export default function ContactPage() {
       className="container mx-auto px-4 md:px-6 py-12 md:py-20"
     >
       <div className="max-w-2xl">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-8">Contact</h1>
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-8 text-blue-500">Contact</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
@@ -25,12 +25,12 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-sm font-medium uppercase tracking-widest mb-2">Email</h3>
+                <h3 className="text-sm font-medium uppercase tracking-widest mb-2 text-blue-500">Email</h3>
                 <p className="text-sm">tejnagesh@gmail.com</p>
               </div>
 
               <div>
-                <h3 className="text-sm font-medium uppercase tracking-widest mb-2">Location</h3>
+                <h3 className="text-sm font-medium uppercase tracking-widest mb-2 text-blue-500">Location</h3>
                 <p className="text-sm">Amsterdam, Netherlands</p>
               </div>
             </div>
@@ -42,14 +42,23 @@ export default function ContactPage() {
                 <label htmlFor="name" className="block text-sm font-medium">
                   Name
                 </label>
-                <Input id="name" placeholder="Your name" className="bg-neutral-800 border-neutral-700" />
+                <Input
+                  id="name"
+                  placeholder="Your name"
+                  className="bg-neutral-800 border-blue-500/30 focus:border-orange-500"
+                />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm font-medium">
                   Email
                 </label>
-                <Input id="email" type="email" placeholder="Your email" className="bg-neutral-800 border-neutral-700" />
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="Your email"
+                  className="bg-neutral-800 border-blue-500/30 focus:border-orange-500"
+                />
               </div>
 
               <div className="space-y-2">
@@ -60,11 +69,11 @@ export default function ContactPage() {
                   id="message"
                   placeholder="Your message"
                   rows={5}
-                  className="bg-neutral-800 border-neutral-700"
+                  className="bg-neutral-800 border-blue-500/30 focus:border-orange-500"
                 />
               </div>
 
-              <Button type="submit" className="bg-green-600 text-black hover:bg-green-500">
+              <Button type="submit" className="bg-blue-500 text-black hover:bg-orange-500">
                 Send Message
               </Button>
             </form>

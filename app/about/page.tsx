@@ -13,8 +13,8 @@ export default function AboutPage() {
     >
       <div className="max-w-3xl">
         <header className="mb-12 flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center">
-          <div className="relative w-48 h-48 overflow-hidden border-2 border-green-400">
-            <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10"></div>
+          <div className="relative w-48 h-48 overflow-hidden border-2 border-blue-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent mix-blend-overlay z-10"></div>
             <Image
               src="/images/profile.jpg"
               alt="Tejaswini Nagesh"
@@ -23,19 +23,19 @@ export default function AboutPage() {
               className="object-cover w-full h-full"
               priority
             />
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
-            <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-500"></div>
+            <div className="absolute top-0 right-0 w-1 h-full bg-blue-500"></div>
           </div>
 
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Tejaswini Nagesh</h1>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-blue-500">Tejaswini Nagesh</h1>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-neutral-400 text-sm">
-              <a href="mailto:tejnagesh@gmail.com" className="hover:text-green-400 transition-colors">
+              <a href="mailto:tejnagesh@gmail.com" className="hover:text-orange-500 transition-colors">
                 tejnagesh@gmail.com
               </a>
             </div>
             <div className="mt-4 inline-block">
-              <span className="font-mono text-xs border border-green-400 px-2 py-1 text-green-400">
+              <span className="font-mono text-xs border border-blue-500 px-2 py-1 text-blue-500">
                 Design Researcher
               </span>
             </div>
@@ -43,14 +43,14 @@ export default function AboutPage() {
         </header>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold tracking-tighter mb-6 text-green-400 flex items-center">
-            <span className="inline-block w-4 h-0.5 bg-green-400 mr-2"></span>
+          <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+            <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
             Experience
-            <span className="inline-block w-4 h-0.5 bg-green-400 ml-2"></span>
+            <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
           </h2>
 
           <div className="space-y-10">
-            <div className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors">
+            <div className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
                 <h3 className="text-base font-medium">Amsterdam Fashion Institute | Researcher</h3>
                 <span className="text-sm text-neutral-400">June 2024 – Present | Amsterdam, NL</span>
@@ -75,7 +75,7 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors">
+            <div className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
                 <h3 className="text-base font-medium">Digital Society School | Design Researcher, Trainee</h3>
                 <span className="text-sm text-neutral-400">Feb 2024 – June 2024 | Amsterdam, NL</span>
@@ -94,7 +94,7 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors">
+            <div className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
                 <h3 className="text-base font-medium">WWF | Design Researcher</h3>
                 <span className="text-sm text-neutral-400">November 2020 – December 2023 | Tezpur, IN</span>
@@ -121,7 +121,7 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors">
+            <div className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
                 <h3 className="text-base font-medium">Cardiac Design Labs | Product Designer</h3>
                 <span className="text-sm text-neutral-400">April 2020 – November 2020 | Bangalore, IN</span>
@@ -149,14 +149,14 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold tracking-tighter mb-6 text-green-400 flex items-center">
-            <span className="inline-block w-4 h-0.5 bg-green-400 mr-2"></span>
+          <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+            <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
             Education
-            <span className="inline-block w-4 h-0.5 bg-green-400 ml-2"></span>
+            <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
           </h2>
 
           <div className="space-y-6">
-            <div className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors">
+            <div className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
                 <h3 className="text-base font-medium">Masters in Design</h3>
                 <span className="text-sm text-neutral-400">2020</span>
@@ -165,7 +165,7 @@ export default function AboutPage() {
               <p className="text-sm text-neutral-300">Industrial Design</p>
             </div>
 
-            <div className="border-l-2 border-green-400/30 pl-4 hover:border-green-400 transition-colors">
+            <div className="border-l-2 border-blue-500/30 pl-4 hover:border-orange-500 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
                 <h3 className="text-base font-medium">Bachelors in Engineering</h3>
                 <span className="text-sm text-neutral-400">2020</span>
@@ -177,15 +177,15 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold tracking-tighter mb-6 text-green-400 flex items-center">
-            <span className="inline-block w-4 h-0.5 bg-green-400 mr-2"></span>
+          <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+            <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
             Skills
-            <span className="inline-block w-4 h-0.5 bg-green-400 ml-2"></span>
+            <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-black/30 p-4 border border-green-400/20 hover:border-green-400/50 transition-colors">
-              <h3 className="text-base font-medium mb-4 text-green-400">Design</h3>
+            <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+              <h3 className="text-base font-medium mb-4 text-blue-500">Design</h3>
               <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-neutral-300">
                 <li>User Research (Qualitative & Quantitative)</li>
                 <li>Usability Testing & Heuristic Evaluation</li>
@@ -200,12 +200,12 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="bg-black/30 p-4 border border-green-400/20 hover:border-green-400/50 transition-colors">
-              <h3 className="text-base font-medium mb-4 text-green-400">Technology</h3>
+            <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+              <h3 className="text-base font-medium mb-4 text-blue-500">Technology</h3>
               <div className="text-sm text-neutral-300 space-y-1">
                 <p className="font-mono">
-                  <span className="text-green-400">$</span> Git/Github • UserZoom • Lookback • OptimalWorkshop •
-                  Dovetail • Excel • PowerBI • Tableau • Figma • Adobe XD • Axure RP • Miro • Jira • Confluence
+                  <span className="text-blue-500">$</span> Git/Github • UserZoom • Lookback • OptimalWorkshop • Dovetail
+                  • Excel • PowerBI • Tableau • Figma • Adobe XD • Axure RP • Miro • Jira • Confluence
                 </p>
               </div>
             </div>
@@ -213,10 +213,10 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold tracking-tighter mb-6 text-green-400 flex items-center">
-            <span className="inline-block w-4 h-0.5 bg-green-400 mr-2"></span>
+          <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+            <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
             Links
-            <span className="inline-block w-4 h-0.5 bg-green-400 ml-2"></span>
+            <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
@@ -224,10 +224,10 @@ export default function AboutPage() {
               href="https://tokaydesigns.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm hover:text-green-400 transition-colors group"
+              className="inline-flex items-center text-sm hover:text-orange-500 transition-colors group"
             >
               <span className="font-mono">
-                <span className="text-green-400 group-hover:mr-1 transition-all">→</span> tokaydesigns.com
+                <span className="text-blue-500 group-hover:mr-1 transition-all">→</span> tokaydesigns.com
               </span>
             </a>
 
@@ -235,10 +235,10 @@ export default function AboutPage() {
               href="https://github.com/T-Nagesh"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm hover:text-green-400 transition-colors group"
+              className="inline-flex items-center text-sm hover:text-orange-500 transition-colors group"
             >
               <span className="font-mono">
-                <span className="text-green-400 group-hover:mr-1 transition-all">→</span> github.com/T-Nagesh
+                <span className="text-blue-500 group-hover:mr-1 transition-all">→</span> github.com/T-Nagesh
               </span>
             </a>
 
@@ -246,10 +246,10 @@ export default function AboutPage() {
               href="https://linkedin.com/in/tejnagesh"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm hover:text-green-400 transition-colors group"
+              className="inline-flex items-center text-sm hover:text-orange-500 transition-colors group"
             >
               <span className="font-mono">
-                <span className="text-green-400 group-hover:mr-1 transition-all">→</span> linkedin.com/in/tejnagesh
+                <span className="text-blue-500 group-hover:mr-1 transition-all">→</span> linkedin.com/in/tejnagesh
               </span>
             </a>
           </div>
