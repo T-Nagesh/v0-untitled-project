@@ -15,6 +15,7 @@ export default function Home() {
   const projects = getAllProjects().filter((project) => project.slug !== "3d-printed-watercolor-box")
   const heroRef = useRef<HTMLDivElement>(null)
   const [showPhoto, setShowPhoto] = useState(true)
+  const [isMouseInHero, setIsMouseInHero] = useState(false)
 
   // Handle scroll to hide photo when scrolling past hero section
   useEffect(() => {
@@ -29,11 +30,32 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Track mouse entering and leaving hero section
+  useEffect(() => {
+    const handleMouseEnter = () => setIsMouseInHero(true)
+    const handleMouseLeave = () => setIsMouseInHero(false)
+
+    if (heroRef.current) {
+      heroRef.current.addEventListener("mouseenter", handleMouseEnter)
+      heroRef.current.addEventListener("mouseleave", handleMouseLeave)
+    }
+
+    return () => {
+      if (heroRef.current) {
+        heroRef.current.removeEventListener("mouseenter", handleMouseEnter)
+        heroRef.current.removeEventListener("mouseleave", handleMouseLeave)
+      }
+    }
+  }, [])
+
   return (
     <div className="relative">
       <AsciiBackground />
 
-      <section ref={heroRef} className="bg-neutral-900 bg-opacity-80 relative z-10 overflow-hidden">
+      <section
+        ref={heroRef}
+        className={`bg-neutral-900 bg-opacity-80 relative z-10 overflow-hidden ${isMouseInHero && showPhoto ? "cursor-none" : ""}`}
+      >
         <div className="container mx-auto relative z-20">
           <motion.div
             className="max-w-2xl py-20"
