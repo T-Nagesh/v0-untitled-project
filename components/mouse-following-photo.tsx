@@ -19,6 +19,15 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
   const [isInHero, setIsInHero] = useState(false)
   const [heroBounds, setHeroBounds] = useState({ left: 0, top: 0, width: 0, height: 0 })
 
+  // Track the last 5 mouse positions for the trail effect
+  const [trailPositions, setTrailPositions] = useState<Array<{ x: number; y: number }>>([
+    { x: 0, y: 0 },
+    { x: 0, y: 0 },
+    { x: 0, y: 0 },
+    { x: 0, y: 0 },
+    { x: 0, y: 0 },
+  ])
+
   // Update hero bounds on resize and scroll
   useEffect(() => {
     const updateBounds = () => {
@@ -42,7 +51,7 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
     }
   }, [heroRef])
 
-  // Track mouse position
+  // Track mouse position and update trail
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       // Check if mouse is within hero section
@@ -56,10 +65,18 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
 
       setIsInHero(mouseInHero)
 
-      // Update mouse position
-      setMousePosition({
+      // Update current mouse position
+      const newPosition = {
         x: e.clientX,
         y: e.clientY,
+      }
+
+      setMousePosition(newPosition)
+
+      // Update trail positions
+      setTrailPositions((prevPositions) => {
+        // Add current position to the beginning and remove the last one
+        return [newPosition, ...prevPositions.slice(0, 4)]
       })
     }
 
@@ -69,30 +86,71 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
 
   if (!isInHero) return null
 
+  // Define opacity levels for the trail
+  const trailOpacities = [1, 0.8, 0.6, 0.4, 0.2]
+
   return (
-    <motion.div
-      className={`fixed pointer-events-none ${className}`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      style={{
-        left: 0,
-        top: 0,
-        transform: `translate(${mousePosition.x}px, ${mousePosition.y}px) translate(-50%, -50%)`,
-      }}
-    >
-      <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-green-400">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10"></div>
-        <Image
-          src={src || "/placeholder.svg"}
-          alt={alt}
-          width={width}
-          height={height}
-          className="object-cover w-full h-full"
-          priority
-        />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
-        <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
-      </div>
-    </motion.div>
+    <>
+      {/* Render the trail (in reverse order so the most transparent is rendered first) */}
+      {trailPositions.map((position, index) => {
+        // Skip the first position (index 0) as it will be the main photo
+        if (index === 0) return null
+
+        return (
+          <motion.div
+            key={`trail-${index}`}
+            className={`fixed pointer-events-none ${className}`}
+            style={{
+              left: 0,
+              top: 0,
+              transform: `translate(${position.x}px, ${position.y}px) translate(-50%, -50%)`,
+              opacity: trailOpacities[index],
+              zIndex: 10 - index, // Ensure proper stacking
+            }}
+          >
+            <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-green-400">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10"></div>
+              <Image
+                src={src || "/placeholder.svg"}
+                alt={alt}
+                width={width}
+                height={height}
+                className="object-cover w-full h-full"
+                priority
+              />
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
+              <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
+            </div>
+          </motion.div>
+        )
+      })}
+
+      {/* Main photo (current position) */}
+      <motion.div
+        className={`fixed pointer-events-none ${className}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        style={{
+          left: 0,
+          top: 0,
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px) translate(-50%, -50%)`,
+          zIndex: 15, // Ensure main photo is on top
+        }}
+      >
+        <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden border-2 border-green-400">
+          <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent mix-blend-overlay z-10"></div>
+          <Image
+            src={src || "/placeholder.svg"}
+            alt={alt}
+            width={width}
+            height={height}
+            className="object-cover w-full h-full"
+            priority
+          />
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-green-400"></div>
+          <div className="absolute top-0 right-0 w-1 h-full bg-green-400"></div>
+        </div>
+      </motion.div>
+    </>
   )
 }
