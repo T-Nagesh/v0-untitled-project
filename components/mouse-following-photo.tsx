@@ -18,6 +18,7 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isInHero, setIsInHero] = useState(false)
   const [heroBounds, setHeroBounds] = useState({ left: 0, top: 0, width: 0, height: 0 })
+  const photoSize = { width: 256, height: 256 } // Approximate size of the photo (md:w-64 md:h-64)
 
   // Track the last 5 mouse positions for the trail effect
   const [trailPositions, setTrailPositions] = useState<Array<{ x: number; y: number }>>([
@@ -50,6 +51,46 @@ export function MouseFollowingPhoto({ src, alt, width, height, className = "", h
       window.removeEventListener("scroll", updateBounds)
     }
   }, [heroRef])
+
+  // Handle text color change when photo is over text
+  useEffect(() => {
+    if (!isInHero || !heroRef?.current) return
+
+    // Function to check if photo overlaps with an element
+    const isOverlapping = (element: Element) => {
+      const rect = element.getBoundingClientRect()
+
+      // Calculate photo bounds (centered on mouse position)
+      const photoLeft = mousePosition.x - photoSize.width / 2
+      const photoRight = mousePosition.x + photoSize.width / 2
+      const photoTop = mousePosition.y - photoSize.height / 2
+      const photoBottom = mousePosition.y + photoSize.height / 2
+
+      // Check for overlap
+      return !(photoRight < rect.left || photoLeft > rect.right || photoBottom < rect.top || photoTop > rect.bottom)
+    }
+
+    // Find all text elements in the hero section
+    const textElements = heroRef.current.querySelectorAll("h1, p")
+
+    // Check each text element for overlap
+    textElements.forEach((element) => {
+      if (isOverlapping(element)) {
+        // Add green text class with !important to override any existing styles
+        element.setAttribute("style", "color: #22c55e !important; transition: color 0.3s ease;")
+      } else {
+        // Remove the style attribute to revert to original color
+        element.removeAttribute("style")
+      }
+    })
+
+    // Cleanup function to remove all green text styles when component unmounts
+    return () => {
+      textElements.forEach((element) => {
+        element.removeAttribute("style")
+      })
+    }
+  }, [mousePosition, isInHero, heroRef, photoSize.width, photoSize.height])
 
   // Track mouse position and update trail
   useEffect(() => {

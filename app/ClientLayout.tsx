@@ -10,7 +10,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { MobileMenu } from "@/components/mobile-menu"
-import { AnimatedCursor } from "@/components/animated-cursor"
+import { DotCursor } from "@/components/dot-cursor"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,8 +31,8 @@ export default function ClientLayout({
         />
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <AnimatedCursor />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <DotCursor />
           <div className="flex flex-col min-h-screen">
             <motion.header
               className="border-b"
