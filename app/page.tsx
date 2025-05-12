@@ -33,43 +33,40 @@ export default function Home() {
     <div className="relative">
       <AsciiBackground />
 
-      <section ref={heroRef} className="py-20 md:py-32 bg-neutral-900 bg-opacity-80 relative z-10">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-start">
-            {showPhoto && (
-              <motion.div
-                className="md:order-2 flex-shrink-0"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <MouseFollowingPhoto src="/images/profile.jpg" alt="Tejaswini Nagesh" width={400} height={400} />
-              </motion.div>
-            )}
-
-            <motion.div
-              className="max-w-2xl md:order-1"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-white">
-                Design Research at the Intersection of Nature & Technology
-              </h1>
-              <p className="text-lg md:text-xl text-neutral-400 mb-8">
-                I am a multifaceted designer with a diverse skill set, specializing in product design, systems design,
-                visualisation, research, AI, and industrial design. I work with multiple international stakeholders to
-                craft innovative and sustainable solutions.
-              </p>
-              <p className="text-lg md:text-xl text-neutral-400">
-                I actively contribute to research in industry, academia and government policy and help synergise these
-                multiple stakeholders. I experiment with AI technology and additive manufacturing to create bespoke
-                designs. I am eager to connect, learn, and contribute to innovative design projects. Let's explore
-                opportunities together!
-              </p>
-            </motion.div>
-          </div>
+      <section ref={heroRef} className="bg-neutral-900 bg-opacity-80 relative z-10 overflow-hidden">
+        <div className="container mx-auto relative z-20">
+          <motion.div
+            className="max-w-2xl py-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-white">
+              Design Research at the Intersection of Nature & Technology
+            </h1>
+            <p className="text-lg md:text-xl text-neutral-400 mb-8">
+              I am a multifaceted designer with a diverse skill set, specializing in product design, systems design,
+              visualisation, research, AI, and industrial design. I work with multiple international stakeholders to
+              craft innovative and sustainable solutions.
+            </p>
+            <p className="text-lg md:text-xl text-neutral-400">
+              I actively contribute to research in industry, academia and government policy and help synergise these
+              multiple stakeholders. I experiment with AI technology and additive manufacturing to create bespoke
+              designs. I am eager to connect, learn, and contribute to innovative design projects. Let's explore
+              opportunities together!
+            </p>
+          </motion.div>
         </div>
+
+        {showPhoto && (
+          <MouseFollowingPhoto
+            src="/images/profile.jpg"
+            alt="Tejaswini Nagesh"
+            width={400}
+            height={400}
+            heroRef={heroRef}
+          />
+        )}
       </section>
 
       <section className="py-20 bg-black bg-opacity-90 relative z-10">
