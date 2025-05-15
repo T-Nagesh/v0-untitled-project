@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { getAllProjects } from "@/lib/projects-data"
 import { AsciiBackground } from "@/components/ascii-background"
 import { MouseFollowingPhoto } from "@/components/mouse-following-photo"
+import { ExperimentalCanvas } from "@/components/experimental-canvas"
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null)
@@ -51,6 +52,7 @@ export default function Home() {
   return (
     <div className="relative">
       <AsciiBackground />
+      <ExperimentalCanvas />
 
       <section
         ref={heroRef}
@@ -64,18 +66,37 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-blue-500">
-              Design Research at the Intersection of Nature & Technology
+              Experimental Design at the Intersection of Systems & Making
             </h1>
             <p className="text-lg md:text-xl text-neutral-400 mb-8">
-              I am a multifaceted designer with a diverse skill set, specializing in product design, systems design,
-              visualisation, research, AI, and industrial design. I work with multiple international stakeholders to
-              craft innovative and sustainable solutions.
+              I am an experimental designer who thrives at the intersection of systems thinking, industrial design, and
+              digital fabrication. My approach combines rigorous research methodologies with hands-on prototyping to
+              create tangible solutions for complex problems.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+                <h3 className="text-base font-medium mb-2 text-blue-500">Systems Thinking</h3>
+                <p className="text-sm text-neutral-300">
+                  Mapping complex relationships and identifying leverage points for meaningful intervention
+                </p>
+              </div>
+              <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+                <h3 className="text-base font-medium mb-2 text-blue-500">Design Research</h3>
+                <p className="text-sm text-neutral-300">
+                  Uncovering insights through participatory methods and contextual inquiry
+                </p>
+              </div>
+              <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+                <h3 className="text-base font-medium mb-2 text-blue-500">Industrial Design</h3>
+                <p className="text-sm text-neutral-300">
+                  Crafting physical solutions through iterative prototyping and digital fabrication
+                </p>
+              </div>
+            </div>
             <p className="text-lg md:text-xl text-neutral-400">
-              I actively contribute to research in industry, academia and government policy and help synergise these
-              multiple stakeholders. I experiment with AI technology and additive manufacturing to create bespoke
-              designs. I am eager to connect, learn, and contribute to innovative design projects. Let's explore
-              opportunities together!
+              I actively experiment with emerging technologies and materials to push the boundaries of what's possible.
+              My work spans from speculative design explorations to practical implementations across industry, academia,
+              and policy.
             </p>
           </motion.div>
         </div>
@@ -93,7 +114,20 @@ export default function Home() {
 
       <section className="py-20 bg-black bg-opacity-90 relative z-10">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-16 text-blue-500">Selected Projects</h2>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-blue-500">Selected Projects</h2>
+            <div className="flex gap-4 mt-4 md:mt-0">
+              <Badge variant="outline" className="bg-neutral-800 hover:bg-neutral-700 border-blue-500/30">
+                Systems Design
+              </Badge>
+              <Badge variant="outline" className="bg-neutral-800 hover:bg-neutral-700 border-blue-500/30">
+                Experimental
+              </Badge>
+              <Badge variant="outline" className="bg-neutral-800 hover:bg-neutral-700 border-blue-500/30">
+                Making
+              </Badge>
+            </div>
+          </div>
 
           <div className="space-y-32">
             {projects.map((project, index) => (
@@ -165,6 +199,69 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-neutral-900 bg-opacity-80 relative z-10">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-8 text-blue-500">Experimental Approach</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-orange-500">Iterative Making</h3>
+              <p className="text-neutral-300 mb-6">
+                I believe in thinking through making. My process involves rapid prototyping, material exploration, and
+                hands-on experimentation to discover unexpected solutions and refine ideas through tangible feedback.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">3D Printing</p>
+                </div>
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">Digital Fabrication</p>
+                </div>
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">Physical Computing</p>
+                </div>
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">Material Studies</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-orange-500">Systems Perspective</h3>
+              <p className="text-neutral-300 mb-6">
+                I approach complex problems by mapping relationships, identifying patterns, and finding leverage points
+                where small interventions can create significant impact. This systems-oriented approach helps me design
+                holistic solutions.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">Stakeholder Mapping</p>
+                </div>
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">Causal Loop Diagrams</p>
+                </div>
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">Scenario Planning</p>
+                </div>
+                <div className="bg-black/30 p-3 border border-blue-500/20">
+                  <p className="text-sm text-neutral-400">Transition Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link
+              href="/experiments"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium bg-blue-500 text-black hover:bg-orange-500 transition-colors"
+            >
+              Explore My Experiments
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>

@@ -26,7 +26,7 @@ export default function ClientLayout({
         <title>Tejaswini Nagesh | Design Researcher</title>
         <meta
           name="description"
-          content="Portfolio of Tejaswini Nagesh, Design Researcher focused on sustainability and wildlife conservation"
+          content="Portfolio of Tejaswini Nagesh, Design Researcher focused on environment and systems design"
         />
       </head>
       <body className={inter.className}>

@@ -69,8 +69,7 @@ export default function ResearchPage() {
         <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-8 text-blue-500">Research</h1>
 
         <p className="text-lg mb-12 text-neutral-300">
-          My research focuses on the intersection of design, technology, and environmental conservation. Below are my
-          published works and ongoing research projects.
+          I explore how design and technology can drive sustainable and systemic change, focusing on environmental impact, generative research, and interdisciplinary collaboration. Below are my published works and ongoing research projects.
         </p>
 
         <div className="space-y-16">

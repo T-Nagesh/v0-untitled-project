@@ -29,6 +29,10 @@ export default function AboutPage() {
 
           <div>
             <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-blue-500">Tejaswini Nagesh</h1>
+            <p className="text-neutral-300 mb-4">
+              Experimental designer with expertise in systems thinking, design research, and industrial design. I
+              combine analytical frameworks with hands-on making to create innovative solutions for complex challenges.
+            </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-neutral-400 text-sm">
               <a href="mailto:tejnagesh@gmail.com" className="hover:text-orange-500 transition-colors">
                 tejnagesh@gmail.com
@@ -36,11 +40,54 @@ export default function AboutPage() {
             </div>
             <div className="mt-4 inline-block">
               <span className="font-mono text-xs border border-blue-500 px-2 py-1 text-blue-500">
-                Design Researcher
+                Design Researcher & Maker
               </span>
             </div>
           </div>
         </header>
+
+        <section className="mb-12">
+          <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
+            <span className="inline-block w-4 h-0.5 bg-blue-500 mr-2"></span>
+            Approach & Philosophy
+            <span className="inline-block w-4 h-0.5 bg-blue-500 ml-2"></span>
+          </h2>
+
+          <div className="space-y-6">
+            <p className="text-neutral-300">
+              My work is driven by a deep curiosity and experimental mindset. I believe in learning through making,
+              testing ideas through rapid prototyping, and embracing an iterative approach to design. By combining
+              systems thinking with hands-on fabrication, I create solutions that address both immediate needs and
+              systemic challenges.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+                <h3 className="text-base font-medium mb-3 text-blue-500">Experimental Process</h3>
+                <p className="text-sm text-neutral-300">
+                  I embrace uncertainty and use experimentation as a tool for discovery. My process involves rapid
+                  prototyping, material exploration, and iterative testing to uncover unexpected solutions.
+                </p>
+              </div>
+
+              <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+                <h3 className="text-base font-medium mb-3 text-blue-500">Systems Perspective</h3>
+                <p className="text-sm text-neutral-300">
+                  I approach complex problems by mapping relationships, identifying patterns, and finding leverage
+                  points where small interventions can create significant impact.
+                </p>
+              </div>
+
+              <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+                <h3 className="text-base font-medium mb-3 text-blue-500">Making & Fabrication</h3>
+                <p className="text-sm text-neutral-300">
+                  With a background in industrial design and mechanical engineering, I bring ideas to life through
+                  digital fabrication, physical prototyping, and material exploration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="mb-12">
           <h2 className="text-xl font-bold tracking-tighter mb-6 text-blue-500 flex items-center">
@@ -185,29 +232,42 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
-              <h3 className="text-base font-medium mb-4 text-blue-500">Design</h3>
+              <h3 className="text-base font-medium mb-4 text-blue-500">Design & Research</h3>
               <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-neutral-300">
                 <li>User Research (Qualitative & Quantitative)</li>
-                <li>Usability Testing & Heuristic Evaluation</li>
-                <li>Survey Design & Data Analysis</li>
-                <li>Persona Development & Journey Mapping</li>
+                <li>Systems Mapping & Causal Loop Diagrams</li>
+                <li>Participatory Design & Co-creation</li>
+                <li>Speculative Design & Future Scenarios</li>
                 <li>Design Thinking & Workshop Facilitation</li>
-                <li>UX Research Tools (UserZoom, Lookback, OptimalWorkshop)</li>
-                <li>Data Analysis & Visualization (Excel, PowerBI, Tableau)</li>
-                <li>Prototyping & Wireframing (Figma, Axure RP, Adobe XD)</li>
+                <li>Service Design & Experience Mapping</li>
+                <li>Data Analysis & Visualization</li>
                 <li>Agile & Scrum Methodologies</li>
-                <li>Enterprise & Industrial UX</li>
               </ul>
             </div>
 
             <div className="bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
-              <h3 className="text-base font-medium mb-4 text-blue-500">Technology</h3>
-              <div className="text-sm text-neutral-300 space-y-1">
-                <p className="font-mono">
-                  <span className="text-blue-500">$</span> Git/Github • UserZoom • Lookback • OptimalWorkshop • Dovetail
-                  • Excel • PowerBI • Tableau • Figma • Adobe XD • Axure RP • Miro • Jira • Confluence
-                </p>
-              </div>
+              <h3 className="text-base font-medium mb-4 text-blue-500">Making & Technical</h3>
+              <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-neutral-300">
+                <li>3D Modeling & CAD (Fusion 360, SolidWorks)</li>
+                <li>Digital Fabrication (3D Printing, Laser Cutting)</li>
+                <li>Physical Prototyping & Model Making</li>
+                <li>Material Exploration & Testing</li>
+                <li>Electronics & Physical Computing (Arduino)</li>
+                <li>Mechanical Design & Engineering</li>
+                <li>Sustainable Materials & Circular Design</li>
+                <li>Visualization & Rendering</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-black/30 p-4 border border-blue-500/20 hover:border-orange-500/50 transition-colors">
+            <h3 className="text-base font-medium mb-4 text-blue-500">Tools & Software</h3>
+            <div className="text-sm text-neutral-300 space-y-1">
+              <p className="font-mono">
+                <span className="text-blue-500">$</span> Fusion 360 • SolidWorks • Rhino • Adobe Creative Suite • Figma
+                • Miro • QGIS • Processing • Arduino • Raspberry Pi • Git/Github • UserZoom • Lookback • OptimalWorkshop
+                • Dovetail • Excel • PowerBI • Tableau
+              </p>
             </div>
           </div>
         </section>

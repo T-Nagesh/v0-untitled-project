@@ -18,12 +18,15 @@ export default function ExperimentsPage() {
       className="container mx-auto px-4 md:px-6 py-12 md:py-20"
     >
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-blue-500">
-          Experiments & Side Projects
-        </h1>
-        <p className="text-lg text-neutral-400 mb-12">
-          A collection of personal explorations, creative experiments, and fun side projects that I work on in my spare
-          time.
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-blue-500">Experiments & Making</h1>
+        <p className="text-lg text-neutral-400 mb-6">
+          A collection of experimental projects, material explorations, and fabrication experiments that showcase my
+          hands-on approach to design and problem-solving.
+        </p>
+        <p className="text-neutral-300 mb-12">
+          I believe that experimentation is essential to innovation. These projects represent my ongoing exploration of
+          materials, techniques, and ideas—often starting with a simple question: "What if?" Through making and testing,
+          I discover unexpected possibilities and develop new approaches to design challenges.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
